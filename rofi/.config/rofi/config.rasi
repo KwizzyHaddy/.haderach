@@ -1,0 +1,5 @@
+configuration {
+    display-drun: "Applications:";
+    modi: "window,run,drun,emoji,calc,";
+}
+@theme "~/.config/rofi/style.rasi"
