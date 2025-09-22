@@ -64,4 +64,10 @@ return {
 
   --cmp-nvim-lsp
   {"hrsh7th/cmp-nvim-lsp"},
+
+  --gitsigns
+  {"lewis6991/gitsigns.nvim"},
+
+  --vim-fugitive
+  {"tpope/vim-fugitive"},
 }

@@ -112,7 +112,6 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.black,
-		null_ls.builtins.diagnostics.pyright,
 	},
 })
 vim.keymap.set("n", "F", vim.lsp.buf.format, {})
@@ -146,3 +145,7 @@ cmp.setup({
 		{ name = "buffer" },
 	}),
 })
+
+------------------------------
+-- Configure gitsigns
+require("gitsigns").setup()
