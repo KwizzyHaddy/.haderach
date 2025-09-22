@@ -93,16 +93,18 @@ vim.keymap.set("n", "D", vim.lsp.buf.definition, {})
 vim.keymap.set({ "n", "v" }, "CA", vim.lsp.buf.code_action, {})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local lspconfig = require("lspconfig")
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   capabilites = capabilities
 })
-lspconfig.pyright.setup({
+vim.lsp.config("pyright", {
   capabilites = capabilities
 })
-lspconfig.bashls.setup({
+vim.lsp.config("bashls", {
   capabilities = capabilities
 })
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("pyright")
+vim.lsp.enable("bashls")
 --------------------------------------------------------------
 -- Configure none-ls
 local null_ls = require("null-ls")
@@ -110,7 +112,7 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.black,
-		null_ls.builtins.diagnostics.pylint,
+		null_ls.builtins.diagnostics.pyright,
 	},
 })
 vim.keymap.set("n", "F", vim.lsp.buf.format, {})
