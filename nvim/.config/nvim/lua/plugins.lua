@@ -70,4 +70,7 @@ return {
 
   --vim-fugitive
   {"tpope/vim-fugitive"},
+
+  --toggleterm
+  {"akinsho/toggleterm.nvim"},
 }

@@ -149,3 +149,11 @@ cmp.setup({
 ------------------------------
 -- Configure gitsigns
 require("gitsigns").setup()
+
+------------------------------
+-- Configure toggleterm
+require("toggleterm").setup{
+  size = 10,
+  open_mapping = [[<c-/>]],
+  direction = "float",
+}
